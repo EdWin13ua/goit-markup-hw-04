@@ -356,8 +356,6 @@ font-weight: 500;
 
 /* #region Portfolio */
 
-.portfolio {}
-
 .portfolio-list {
     display: flex;
     gap: 24px;
@@ -376,25 +374,27 @@ font-weight: 500;
 }
 
 .portfolio-list-item {
+    position: relative;
     background: #fff;
     width: calc((100% - 48px) / 3);
+
 }
 
 .portfolio-item {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portfolio-offer {
     font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 .portfolio-info {
@@ -403,6 +403,28 @@ font-weight: 500;
     border-top: none;
     width: 360px;
 }
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 32px 164px;
+    background-color: #4d5ae5;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.portfolio-list-item:hover .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* #endregion Portfolio */
 
 /* #region Footer */
